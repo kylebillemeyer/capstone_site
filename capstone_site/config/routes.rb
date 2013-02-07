@@ -1,4 +1,13 @@
 CapstoneSite::Application.routes.draw do
+  get "users/new"
+
+  root               to: "home#index"
+  match "/home",      to: "home#index"
+  match "/pancakes",  to: "pancakes#index"
+  match "/timesink", to: "time_sink#index"
+  match "/team",      to: "team#index"
+
+  match '/signup',  to: 'users#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
