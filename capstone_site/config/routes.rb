@@ -1,5 +1,5 @@
 CapstoneSite::Application.routes.draw do
-  get "users/new"
+  resources :users
 
   root               to: "home#index"
   match "/home",      to: "home#index"
