@@ -14,4 +14,22 @@
 	border-bottom-right-radius: 15px;
 }
 
+.content h1{
+	color: $bluetoneMid;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.content h2, .content h3, .content h4 {
+	margin-top: 35px;
+}
+
+.content p, .content h1, .content h2, .content h3, .content h4 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.content p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
 
