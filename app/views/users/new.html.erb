@@ -30,6 +30,13 @@
 	  <%= f.label(:desc, "Description")  %>
 	  <%= f.text_field :desc %>
 
+	  <%= fields_for(@admin_password) do |u| %>
+
+	  <%= u.label :password, "Admin Password" %>
+	  <%= u.password_field :password %>
+
+	  <% end %>
+
 	  <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>

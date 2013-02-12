@@ -5,7 +5,7 @@ CapstoneSite::Application.routes.draw do
   match "/home",      to: "home#index"
   match "/pancakes",  to: "pancakes#index"
   match "/timesink", to: "time_sink#index"
-  match "/team",      to: "team#index"
+  match "/team",      to: "users#index"
 
   match '/signup',  to: 'users#new'
   # The priority is based upon order of creation:
