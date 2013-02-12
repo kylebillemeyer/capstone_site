@@ -5,8 +5,7 @@
 @import "custom"; 
 
 .page {
-	background-color: $bluetone;
-	height: 100%;
+	background-color: $bluetoneLight;
 	-moz-border-bottom-left-radius: 15px;
 	-webkit-border-bottom-left-radius: 15px;
 	border-bottom-left-radius: 15px;
@@ -15,10 +14,4 @@
 	border-bottom-right-radius: 15px;
 }
 
-.is-padded {
-	padding: 15px;
-}
 
-.is-pushed-down {
-	margin-top: 20px;
-}

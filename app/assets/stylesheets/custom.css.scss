@@ -9,10 +9,30 @@ body {
   }
 }
 
-$grayMediumLight:          #eaeaea;
-$bluetone:                 #E5E3FA;
+.is-padded {
+  padding: 15px;
+}
 
- $navBarTextColor:          #E3E3E3;
+.is-pushed-down {
+  margin-top: 20px;
+}
+
+.is-centered {
+  text-align: center;
+}
+
+$grayMediumLight:          #eaeaea;
+$bluetoneFaded:            #D1D1FF;
+$bluetoneLight:            #8080FF;
+$bluetoneMid:              #0000FF;
+$bluetoneDark:             #00004D;
+
+$greentoneFaded:           #D1FFD1;
+$greentoneLight:           #80FF80;
+$greentoneMid:             #00FF00;
+$greentoneDark:            #21C400;
+
+$navBarTextColor:          #E3E3E3;
 $navBarTextHighlightColor: #FFFFFF;
 
 @mixin black_gradient {
@@ -27,29 +47,40 @@ $navBarTextHighlightColor: #FFFFFF;
 }
 
 .navbar-inner, .navbar .btn-navbar {
-  @include black_gradient;
+  //@include black_gradient;
+  background: #1C1C1C;
 }
 
 .navbar .nav .active > a, .navbar .nav .active > a:hover {
     background-color: rgba(69,72,77,1);
 }
 
-@mixin navbar_text_color_override{
-  color: $navBarTextColor;
-  text-shadow: none;
+@mixin navbar_text_override{
+  color: #999999;;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+  -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.6);
+     -moz-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0px 10px rgba(0, 0, 0, 0.6);
 }
 
 .navbar .brand {  
   float: right;
-  @include navbar_text_color_override;
+  @include navbar_text_override;
+  color: $greentoneMid;
 }
 
 .navbar .nav li > a {
-  @include navbar_text_color_override;
+  @include navbar_text_override;
 }
 
 .navbar .nav .active > a, .navbar .nav .active > a:hover {
-  @include navbar_text_color_override;
+  @include navbar_text_override;
 }
 
 .navbar .nav .active > a {
@@ -57,7 +88,7 @@ $navBarTextHighlightColor: #FFFFFF;
 }
 
 .navbar .nav > li > a:hover {
-  @include navbar_text_color_override;
+  @include navbar_text_override;
   color: $navBarTextHighlightColor;
 }
 
